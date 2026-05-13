@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://4xgfsqid01er"]
+[gd_scene load_steps=11 format=3 uid="uid://4xgfsqid01er"]
 
 [ext_resource type="Shader" path="res://shaders/bulb.gdshader" id="1_fo1nw"]
+[ext_resource type="Shader" path="res://shaders/camerashader.gdshader" id="2_xlpiu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dihsy"]
 
@@ -23,6 +24,9 @@ glow_bloom = 0.09
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sfurp"]
 render_priority = 0
 shader = ExtResource("1_fo1nw")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_61r8y"]
+shader = ExtResource("2_xlpiu")
 
 [node name="Node3D" type="Node3D"]
 
@@ -51,3 +55,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.74525, 2.34129)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_61r8y")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
