@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://4xgfsqid01er"]
+
+[ext_resource type="Shader" path="res://shaders/bulb.gdshader" id="1_fo1nw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dihsy"]
+
+[sub_resource type="Sky" id="Sky_hrjg6"]
+sky_material = SubResource("ProceduralSkyMaterial_dihsy")
+process_mode = 1
+
+[sub_resource type="Environment" id="Environment_rhi83"]
+background_mode = 2
+sky = SubResource("Sky_hrjg6")
+
+[sub_resource type="BoxMesh" id="BoxMesh_ei8r0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_sjhyb"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_fry3o"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sfurp"]
+render_priority = 0
+shader = ExtResource("1_fo1nw")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rhi83")
+
+[node name="floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_ei8r0")
+
+[node name="wall1" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 1, 0, 0.5, -3)
+mesh = SubResource("BoxMesh_sjhyb")
+
+[node name="wall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-07, 0, -1, 0, 10, 0, 10, 0, -4.37114e-08, -5, 0.5, 2)
+mesh = SubResource("BoxMesh_sjhyb")
+
+[node name="bulb" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 0)
+mesh = SubResource("SphereMesh_fry3o")
+surface_material_override/0 = SubResource("ShaderMaterial_sfurp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.745246, 2.34129)
