@@ -11,6 +11,8 @@ process_mode = 1
 [sub_resource type="Environment" id="Environment_rhi83"]
 background_mode = 2
 sky = SubResource("Sky_hrjg6")
+glow_enabled = true
+glow_bloom = 0.09
 
 [sub_resource type="BoxMesh" id="BoxMesh_ei8r0"]
 
@@ -45,4 +47,7 @@ mesh = SubResource("SphereMesh_fry3o")
 surface_material_override/0 = SubResource("ShaderMaterial_sfurp")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.745246, 2.34129)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.74525, 2.34129)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 0)

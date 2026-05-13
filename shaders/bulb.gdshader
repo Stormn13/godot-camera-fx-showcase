@@ -6,7 +6,10 @@ void vertex() {
 
 void fragment() {
 	// Called for every pixel the material is visible on.
-	ALBEDO = vec3(1, 1, 0.5);
+	ALBEDO = vec3(1, 1, 0.5); //color set
+	ALPHA = 0.8;
+	EMISSION = vec3(1, 1, 0.5);
+	
 }
 
 //void light() {
