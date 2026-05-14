@@ -22,6 +22,7 @@ shader = ExtResource("1_fo1nw")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_61r8y"]
 shader = ExtResource("2_xlpiu")
 shader_parameter/random_value = null
+shader_parameter/intensity = null
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_2mcb1")
@@ -63,3 +64,72 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="border" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/border"]
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 120.0
+offset_bottom = 50.0
+
+[node name="ColorRect3" type="ColorRect" parent="CanvasLayer/border"]
+layout_mode = 1
+offset_left = 1032.0
+offset_top = 40.0
+offset_right = 1112.0
+offset_bottom = 50.0
+
+[node name="ColorRect4" type="ColorRect" parent="CanvasLayer/border"]
+offset_left = 40.0
+offset_top = 528.0
+offset_right = 50.0
+offset_bottom = 608.0
+
+[node name="ColorRect5" type="ColorRect" parent="CanvasLayer/border"]
+offset_left = 1102.0
+offset_top = 528.0
+offset_right = 1112.0
+offset_bottom = 608.0
+
+[node name="ColorRect6" type="ColorRect" parent="CanvasLayer/border"]
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 120.0
+
+[node name="ColorRect7" type="ColorRect" parent="CanvasLayer/border"]
+offset_left = 1102.0
+offset_top = 50.0
+offset_right = 1112.0
+offset_bottom = 120.0
+
+[node name="ColorRect8" type="ColorRect" parent="CanvasLayer/border"]
+offset_left = 50.0
+offset_top = 598.0
+offset_right = 120.0
+offset_bottom = 608.0
+
+[node name="ColorRect9" type="ColorRect" parent="CanvasLayer/border"]
+offset_left = 1032.0
+offset_top = 598.0
+offset_right = 1102.0
+offset_bottom = 608.0
+
+[node name="text" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/text"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 75.0
+offset_right = 140.0
+offset_bottom = 115.0
+text = "Play ▶"
