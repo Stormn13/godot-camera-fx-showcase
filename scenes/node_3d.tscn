@@ -132,4 +132,6 @@ offset_left = 75.0
 offset_top = 75.0
 offset_right = 140.0
 offset_bottom = 115.0
+bbcode_enabled = true
 text = "Play ▶"
+tab_size = 6
