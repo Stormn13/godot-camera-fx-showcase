@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://4xgfsqid01er"]
+[gd_scene load_steps=11 format=3 uid="uid://4xgfsqid01er"]
 
+[ext_resource type="Script" path="res://scripts/random_bridge.gd" id="1_2mcb1"]
 [ext_resource type="Shader" path="res://shaders/bulb.gdshader" id="1_fo1nw"]
 [ext_resource type="Script" path="res://scripts/camera_3d.gd" id="2_mbubo"]
 [ext_resource type="Shader" path="res://shaders/camerashader.gdshader" id="2_xlpiu"]
@@ -20,8 +21,10 @@ shader = ExtResource("1_fo1nw")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_61r8y"]
 shader = ExtResource("2_xlpiu")
+shader_parameter/random_value = null
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_2mcb1")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_55q7d")

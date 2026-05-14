@@ -1,17 +1,27 @@
 shader_type canvas_item;
 
+uniform float random_value;
+
+float random(vec2 p){
+	return fract(
+		sin(dot(p, vec2(12.9898,78.233)))
+		* 43758.5453
+	);
+}
+
 void vertex() {
 	// Called for every vertex the material is visible on.
 }
 
 void fragment() {
 	// Called for every pixel the material is visible on.
-	vec4 color;
-	color.x = 1.0;
-	color.y = 1.0;
-	color.z = 1.0;
-	color.w = 0.1;
-	COLOR = color;
+	float r = random(UV + random_value);
+	if(r > 0.99){
+		COLOR = vec4(1.0, 1.0, 1.0, 0.8);
+	}
+	else{
+		COLOR = vec4(1.0, 1.0, 1.0, 0);
+	}
 }
 
 //void light() {
