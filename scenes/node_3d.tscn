@@ -72,6 +72,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="ColorRect2" type="ColorRect" parent="CanvasLayer/border"]
+layout_mode = 0
 offset_left = 40.0
 offset_top = 40.0
 offset_right = 120.0
@@ -85,36 +86,42 @@ offset_right = 1112.0
 offset_bottom = 50.0
 
 [node name="ColorRect4" type="ColorRect" parent="CanvasLayer/border"]
+layout_mode = 0
 offset_left = 40.0
 offset_top = 528.0
 offset_right = 50.0
 offset_bottom = 608.0
 
 [node name="ColorRect5" type="ColorRect" parent="CanvasLayer/border"]
+layout_mode = 0
 offset_left = 1102.0
 offset_top = 528.0
 offset_right = 1112.0
 offset_bottom = 608.0
 
 [node name="ColorRect6" type="ColorRect" parent="CanvasLayer/border"]
+layout_mode = 0
 offset_left = 40.0
 offset_top = 50.0
 offset_right = 50.0
 offset_bottom = 120.0
 
 [node name="ColorRect7" type="ColorRect" parent="CanvasLayer/border"]
+layout_mode = 0
 offset_left = 1102.0
 offset_top = 50.0
 offset_right = 1112.0
 offset_bottom = 120.0
 
 [node name="ColorRect8" type="ColorRect" parent="CanvasLayer/border"]
+layout_mode = 0
 offset_left = 50.0
 offset_top = 598.0
 offset_right = 120.0
 offset_bottom = 608.0
 
 [node name="ColorRect9" type="ColorRect" parent="CanvasLayer/border"]
+layout_mode = 0
 offset_left = 1032.0
 offset_top = 598.0
 offset_right = 1102.0
@@ -135,3 +142,11 @@ offset_bottom = 115.0
 bbcode_enabled = true
 text = "Play ▶"
 tab_size = 6
+
+[node name="timer" type="RichTextLabel" parent="CanvasLayer/text"]
+layout_mode = 0
+offset_left = 1031.0
+offset_top = 547.0
+offset_right = 1091.0
+offset_bottom = 587.0
+text = "00:01"
