@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://4xgfsqid01er"]
+[gd_scene load_steps=12 format=3 uid="uid://4xgfsqid01er"]
 
 [ext_resource type="Script" path="res://scripts/random_bridge.gd" id="1_2mcb1"]
 [ext_resource type="Shader" path="res://shaders/bulb.gdshader" id="1_fo1nw"]
 [ext_resource type="Script" path="res://scripts/camera_3d.gd" id="2_mbubo"]
 [ext_resource type="Shader" path="res://shaders/camerashader.gdshader" id="2_xlpiu"]
+[ext_resource type="Script" path="res://scripts/timer.gd" id="5_r87hl"]
 
 [sub_resource type="Environment" id="Environment_55q7d"]
 background_mode = 2
@@ -132,6 +133,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("5_r87hl")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/text"]
 layout_mode = 0
@@ -143,10 +145,15 @@ bbcode_enabled = true
 text = "Play ▶"
 tab_size = 6
 
-[node name="timer" type="RichTextLabel" parent="CanvasLayer/text"]
+[node name="Label" type="Label" parent="CanvasLayer/text"]
 layout_mode = 0
 offset_left = 1031.0
 offset_top = 547.0
-offset_right = 1091.0
-offset_bottom = 587.0
-text = "00:01"
+offset_right = 1071.0
+offset_bottom = 570.0
+text = "00:00"
+
+[node name="Timer" type="Timer" parent="CanvasLayer/text/Label"]
+autostart = true
+
+[connection signal="timeout" from="CanvasLayer/text/Label/Timer" to="CanvasLayer/text" method="_on_timer_timeout"]
